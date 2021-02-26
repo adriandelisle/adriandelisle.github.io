@@ -20,7 +20,6 @@ module.exports = {
     },
   },
   rules: {
-    'import/exports-last': 'error',
     'import/prefer-default-export': 'off',
     'import/order': [
       'error',
@@ -45,11 +44,7 @@ module.exports = {
             group: 'internal',
           },
           {
-            pattern: 'sections',
-            group: 'internal',
-          },
-          {
-            pattern: 'helpers/**',
+            pattern: 'themes/**',
             group: 'internal',
           },
           {
@@ -65,5 +60,8 @@ module.exports = {
         },
       },
     ],
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'react/jsx-no-target-blank': 'error',
   },
 }
