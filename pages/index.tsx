@@ -2,8 +2,11 @@ import React from 'react'
 
 import styled from 'styled-components'
 
+import { Anchor } from 'components/anchor'
+import { Attribution } from 'components/attribution'
 import { Heading, HeadingVariant } from 'components/heading'
-import { Root } from 'components/layout'
+import { Root, Header, Footer } from 'components/layout'
+import { SocialIcon } from 'components/social-icon'
 import { Text } from 'components/text'
 import FlickrSvg from 'public/flickr-brands.svg'
 import GitHubSvg from 'public/github-brands.svg'
@@ -16,57 +19,73 @@ const SocialLinksList = styled.div`
   justify-content: space-between;
 `
 
-const SvgContainer = styled.div`
-  height: 2rem;
-  width: 2rem;
-  margin: 1rem;
-`
-
 const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 0 280px;
+  align-items: flex-start;
+
+  width: 450px;
+
+  @media only screen and (max-width: 450px) {
+    width: 350px;
+    padding: 0 16px;
+  }
+`
+
+const HeroSection = styled.div``
+
+const ProjectSection = styled.div`
+  margin-top: 32px;
 `
 
 const IndexPage: React.FC = () => (
   <Root>
+    <Header />
     <Content>
-      <Heading>Adrian De Lisle</Heading>
-      <Text>
-        I&apos;m a Canada based software developer. Click an icon below to learn more about my profressional work,
-        GitHub, photography, or timelapses.
-      </Text>
-      <SocialLinksList>
-        <a href="https://www.linkedin.com/in/adriandelisle/" target="_blank" rel="noreferrer noopener">
-          <SvgContainer>
+      <HeroSection>
+        <Heading>Adrian De&nbsp;Lisle</Heading>
+        <Text>
+          I&apos;m a Canada based software developer and photographer. Click an icon below to learn more about my
+          profressional work, GitHub, photography, or timelapses.
+        </Text>
+
+        <SocialLinksList>
+          <SocialIcon url="https://www.linkedin.com/in/adriandelisle/">
             <LinkedInSvg />
-          </SvgContainer>
-        </a>
-        <a href="https://github.com/adriandelisle" target="_blank" rel="noreferrer noopener">
-          <SvgContainer>
+          </SocialIcon>
+          <SocialIcon url="https://github.com/adriandelisle">
             <GitHubSvg />
-          </SvgContainer>
-        </a>
-        <a href="https://www.flickr.com/photos/adriandelisle/" target="_blank" rel="noreferrer noopener">
-          <SvgContainer>
+          </SocialIcon>
+          <SocialIcon url="https://www.flickr.com/photos/adriandelisle/">
             <FlickrSvg />
-          </SvgContainer>
-        </a>
-        <a href="https://www.youtube.com/c/AdrianDeLisle" target="_blank" rel="noreferrer noopener">
-          <SvgContainer>
+          </SocialIcon>
+          <SocialIcon url="https://www.youtube.com/c/AdrianDeLisle">
             <YoutubeSvg />
-          </SvgContainer>
-        </a>
-      </SocialLinksList>
-      <Heading variant={HeadingVariant.H2}>Projects</Heading>
-      <Text>
-        <a href="https://intensifies-transparency.adriandelisle.dev/" target="_blank" rel="noreferrer noopener">
-          Intensifies Transparency
-        </a>
-      </Text>
+          </SocialIcon>
+        </SocialLinksList>
+      </HeroSection>
+      <ProjectSection>
+        <Heading variant={HeadingVariant.H2}>Projects</Heading>
+        <Text>
+          <Anchor href="https://intensifies-transparency.adriandelisle.dev/" target="_blank" rel="noreferrer noopener">
+            Intensifies Transparency
+          </Anchor>
+          <Text>
+            Create a silly slack emoji that bounces around with a transparent background just by uploading an image.
+          </Text>
+        </Text>
+      </ProjectSection>
     </Content>
+    <Footer>
+      <Text>
+        Made by: Adrian De Lisle.{' '}
+        <Anchor href="https://github.com/adriandelisle/adriandelisle.github.io">Source on GitHub</Anchor>
+      </Text>
+      <Attribution>
+        Uses <Anchor href="https://fontawesome.com/license">Font Awesome Icons</Anchor>
+      </Attribution>
+    </Footer>
   </Root>
 )
 

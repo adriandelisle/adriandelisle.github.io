@@ -16,14 +16,21 @@ interface HeadingProps {
 const H1 = styled.h1`
   font-family: ${(props) => props.theme.fontFamily};
   font-size: 3rem;
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
 `
 const H2 = styled.h2`
   font-family: ${(props) => props.theme.fontFamily};
   font-size: 2rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 `
 const H3 = styled.h3`
   font-family: ${(props) => props.theme.fontFamily};
   font-size: 1.5rem;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
 `
 
 export const Heading = ({ variant, children }: HeadingProps) => {
