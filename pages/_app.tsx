@@ -2,6 +2,7 @@
 import React from 'react'
 
 import type { AppProps /*, AppContext */ } from 'next/app'
+import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 
 import { AppTheme } from 'themes/default'
@@ -11,9 +12,14 @@ import 'normalize.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={AppTheme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>Adrian De Lisle</title>
+      </Head>
+      <ThemeProvider theme={AppTheme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
   )
 }
 
