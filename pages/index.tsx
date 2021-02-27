@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Head from 'next/head'
 import styled from 'styled-components'
 
 import { Anchor } from 'components/anchor'
@@ -42,9 +41,6 @@ const ProjectSection = styled.div`
 
 const IndexPage: React.FC = () => (
   <Root>
-    <Head>
-      <title>Adrian De Lisle</title>
-    </Head>
     <Header />
     <Content>
       <HeroSection>

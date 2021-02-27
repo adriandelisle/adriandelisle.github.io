@@ -11,7 +11,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <title>Adrian De Lisle</title>
+        </Head>
         <body>
           <Main />
           <NextScript />
