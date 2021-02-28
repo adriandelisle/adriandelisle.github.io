@@ -1,41 +1,31 @@
-# TypeScript Next.js example
+# adriandelisle.dev
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+Personal web site for Adrian De Lisle (me) where I can learn and experiment with various technologies. Currently a basic placeholder site written using TypeScript, Next.js, and styled components.
 
-## Deploy your own
+## Potential Future Work
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+- More traditional layout
+- Themes
+- Blog
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+## Commands
 
-## How to use it?
+### `npm run dev`
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+- Starts a next.js dev environment
 
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-```
+### `npm run build`
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- Creates a next.js build
 
-## Notes
+### `npm run export`
 
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
+- Creates a static build of the HTML ([next export](https://nextjs.org/docs/advanced-features/static-html-export))
 
-```
-npm install --save-dev typescript
-```
+### `npm run type-check`
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+- Runs the TypeScript type check
 
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
+### `npm run lint`
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+- Runs eslint on all .ts and .tsx files

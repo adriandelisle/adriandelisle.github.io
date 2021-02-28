@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "author": "Adrian De Lisle",
   "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adriandelisle/adriandelisle.github.io"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "start": "next start",
     "type-check": "tsc",
     "lint": "eslint . --ext .ts,.tsx",
     "postinstall": "is-ci || husky install"
